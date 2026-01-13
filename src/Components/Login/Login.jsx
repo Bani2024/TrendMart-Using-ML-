@@ -1,14 +1,15 @@
  import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import lock_screen from '../Assets/image.png';
+import lock_screen from '../Assets/Frame.png';
 import password_icon from '../Assets/password.png';
 import user_icon from '../Assets/person.png';
 import './Login.css';
 
 const Login = () => {
+  
    useEffect(() => {
     // Set login page background color
-     document.body.style.background = "linear-gradient(#2A00B7, #42006C)";
+     document.body.style.background = "linear-gradient(#4FB286, #3C896D)";
     // Cleanup: reset background when leaving login page
     return () => {
       document.body.style.backgroundColor = "white"; // default for other pages
@@ -48,17 +49,17 @@ const Login = () => {
   return (
     <div className="login_page">
     <div className='container'>
-      <div className="header">
-        <div className="text">Login</div>
-        <div className="underline"></div>
-      </div>
-
+    <div className="front">
       <div className="input_img">
         <div className="lock_img">
           <img src={lock_screen} alt="" />
         </div>
-
+        <div className="form_layout">
         <div className="inputs">
+           <div className="header">
+        <div className="text">Admin Login</div>
+        
+      </div>
           <form onSubmit={handleSubmit}>
             <div className="input">
               <img src={user_icon} alt="" />
@@ -83,9 +84,14 @@ const Login = () => {
             Forgot Password? <span>Click here</span>
           </div> */}
         </div>
+      <p >{message}</p>
       </div>
+     </div>
+    </div>
 
-      <p style={{ textAlign: "center", color: "red" }}>{message}</p>
+      
+
+        
     </div>
     </div>
   );

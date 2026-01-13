@@ -1,0 +1,245 @@
+/* Layout with sidebar */
+.settings-dashboard-container {
+  display: flex;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  transition: 0.3s ease;
+  font-family: "Poppins";
+}
+
+/* Main content area beside sidebar */
+.settings-main {
+  margin-left: 250px; /* match sidebar width */
+  flex-grow: 1;
+  padding: 40px;
+}
+
+.settings-main h2 {
+  
+  color: #006c4f;
+  margin-bottom: 25px;
+  font-size:20px; font-weight:600;
+}
+
+/* Each settings box */
+.settings-section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;              
+  justify-content: space-between; 
+  align-items: center;  
+}
+
+.settings-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #0f172a;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+/* Form design */
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.settings-form label {
+  font-weight: 500;
+  color: #334155;
+}
+
+
+
+
+/* Theme toggle section */
+.theme-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-toggle button {
+ 
+  color: black;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+
+.theme-toggle span{
+  padding-right: 200px;
+}
+/* Notification section */
+.option-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+/* Language dropdown */
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+}
+
+/* Dark theme support */
+.settings-dashboard-container.dark {
+  background-color: #1e1e2f;
+  color: #f1f5f9;
+}
+
+.settings-dashboard-container.dark .settings-section {
+  background-color: #2d2d3f;
+  color: #f1f5f9;
+}
+
+.settings-dashboard-container.dark h2,
+.settings-dashboard-container.dark label {
+  color: #e2e8f0;
+}
+/* Existing styles remain the same */
+.open{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Buttons to open modals */
+.open-modal-btn {
+  background: none;
+  color: #cbd5e1;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  
+}
+
+.open-modal-btn:hover {
+  background: #0f172a;
+  background: none;
+}
+
+/* Modal overlay and box */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  background: white;
+  width: 400px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-form label {
+  font-weight: 500;
+  color: #334155;
+}
+
+.modal-form input {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.modal-buttons button {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-buttons button:first-child {
+  background: #e2e8f0;
+}
+
+.modal-buttons button:last-child {
+  background: #3b82f6;
+  color: white;
+}
+
+.modal-buttons button:last-child:hover {
+  background: #2563eb;
+}
+
+/* Dark mode modal support */
+.settings-dashboard-container.dark .modal {
+  background: #2d2d3f;
+  color: #f1f5f9;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+.settings-footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  background: var(--card-bg);
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  color: var(--text-color);
+  font-size: 14px;
+  border-radius: 12px;
+}
+
+.settings-footer p {
+  margin: 6px 0;
+}
+
+.settings-footer .footer-links a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.settings-footer .footer-links a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}

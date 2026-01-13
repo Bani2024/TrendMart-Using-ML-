@@ -1,30 +1,54 @@
-import { FaBox, FaChartBar, FaHome, FaPowerOff, FaUsers } from "react-icons/fa";
-import { useNavigate } from "react-router-dom"; // ✅ for redirect
+import { FaBox, FaChartLine, FaHandshake, FaPowerOff, FaTruck, FaUsers, FaWrench } from "react-icons/fa";
+import { TbLayoutDashboard } from "react-icons/tb";
+import { Link, useNavigate } from "react-router-dom"; // for redirect
+import logo from '../Assets/vege.png';
 import "./Sidebar.css";
+
+
 
 const Sidebar = () => {
   const navigate = useNavigate();
 
-  const handleLogout = () => {
-    localStorage.removeItem("isLoggedIn");
-    navigate("/Login", { replace: true });
-    window.history.pushState(null, "", "/Login");
+   const handleLogout = () => {
+    localStorage.removeItem("user"); // clear user session if stored
+    navigate("/"); // go back to login page
   };
 
   return (
     <div className="sidebar">
-      <h2>🛒 BigMart</h2>
-
+       <div className="logo_section">
+        <div className="logo">
+        <img src={logo} alt="" />
+        </div>
+       <h2> TrendMart</h2>
+           </div>
       <ul>
-        <li><FaHome /> Dashboard</li>
-        <li><FaBox /> Products</li>
-        <li><FaUsers /> Customers</li>
-        <li><FaChartBar /> Reports</li>
+        <li>
+          <Link to="/dashboard"><TbLayoutDashboard /> Overview</Link>
+          </li>
+        <li>
+          <Link to="/product"><FaBox /> Products</Link>
+        </li>
+        <li>
+          <Link to="/customers"><FaUsers /> Customers</Link>
+        </li>
+        <li>
+          <Link to="/orders"><FaTruck /> Orders</Link>
+        </li>
+        <li>
+          <Link to="/partners"><FaHandshake /> Partners</Link>
+        </li>
+        <li>
+          <Link to="/insights"><FaChartLine /> Insights</Link>
+        </li>
+        <li>
+          <Link to="/settings"><FaWrench /> Settings</Link>
+        </li>
       </ul>
 
       {/* ✅ Logout button */}
       <div className="logout" onClick={handleLogout}>
-        <FaPowerOff /> Logout
+        <Link to="/" /><FaPowerOff /> Logout
       </div>
     </div>
   );

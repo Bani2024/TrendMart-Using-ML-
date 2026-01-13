@@ -46,17 +46,17 @@ The vision is to empower small and medium businesses to understand customer dema
 ---
 
 ## ✨ Key Features
-- 🔐 **Login Authentication:** Secure access for store owners or admins.  
-- 📊 **Interactive Dashboard:** Displays dynamic sales charts and product insights.  
-- 🧮 **Sales Prediction:** Predicts future sales using machine learning models.  
-- 🛒 **Trending Product Detection:** Identifies items gaining popularity.  
-- 💾 **Database Integration:** Stores all sales and user information securely.  
-- ⚡ **Smooth Navigation:** Uses **React Router** for fast and seamless transitions.  
-- 🧠 **Insightful Analysis:** Supports better stock management and profit planning.  
+-  **Login Authentication:** Secure access for store owners or admins.  
+-  **Interactive Dashboard:** Displays dynamic sales charts and product insights.  
+-  **Sales Prediction:** Predicts future sales using machine learning models.  
+-  **Trending Product Detection:** Identifies items gaining popularity.  
+-  **Database Integration:** Stores all sales and user information securely.  
+-  **Smooth Navigation:** Uses **React Router** for fast and seamless transitions.  
+-  **Insightful Analysis:** Supports better stock management and profit planning.  
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 | Layer | Technologies Used |
 |-------|--------------------|
 | **Frontend** | React.js, HTML5, CSS3, JavaScript |
@@ -68,13 +68,13 @@ The vision is to empower small and medium businesses to understand customer dema
 
 ---
 
-## 🚀 Future Enhancements
-- 📱 **Mobile-Friendly UI:** Make the dashboard fully responsive for mobile users.  
-- 🤖 **Advanced ML Models:** Implement deep learning models (LSTM, XGBoost) for improved accuracy.  
-- 🔔 **Notification System:** Send alerts for trending or low-stock products.  
-- 🧾 **Automated Reports:** Generate PDF summaries of weekly or monthly predictions.  
-- ☁️ **Cloud Integration:** Store and analyze data on cloud platforms for scalability.  
-- 💬 **Chatbot Support:** Add an AI chatbot to explain trends and suggest stock actions.  
+##  Future Enhancements
+-  **Mobile-Friendly UI:** Make the dashboard fully responsive for mobile users.  
+-  **Advanced ML Models:** Implement deep learning models (LSTM, XGBoost) for improved accuracy.  
+-  **Notification System:** Send alerts for trending or low-stock products.  
+-  **Automated Reports:** Generate PDF summaries of weekly or monthly predictions.  
+-  **Cloud Integration:** Store and analyze data on cloud platforms for scalability.  
+-  **Chatbot Support:** Add an AI chatbot to explain trends and suggest stock actions.  
 
 ---
 

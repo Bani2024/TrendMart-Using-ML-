@@ -1,0 +1,92 @@
+.orders-container {
+  display: flex;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  font-family: "Poppins";
+}
+
+.orders-content {
+  flex: 1;
+  padding: 30px;
+  margin-left: 250px;
+}
+
+.orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.orders-header h2{
+  color: #006c4f;
+  font-size:20px; font-weight:600;
+}
+.search-filter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 5px 10px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding-left: 1px;
+}
+
+.filter-select {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px 10px;
+  outline: none;
+  background: #fff;
+  cursor: pointer;
+}
+
+.orders-table {
+  width: 100%;
+  margin-top: 25px;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+}
+
+.orders-table th, .orders-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.orders-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.status-dropdown {
+  border: none;
+  border-radius: 6px;
+  padding: 6px 8px;
+  color: white;
+  font-weight: 500;
+  outline: none;
+}
+
+.status-dropdown.pending {
+  background-color: #fbbf24; /* yellow */
+}
+
+.status-dropdown.in-transit {
+  background-color: #3b82f6; /* blue */
+}
+
+.status-dropdown.delivered {
+  background-color: #22c55e; /* green */
+}
